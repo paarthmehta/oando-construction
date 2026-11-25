@@ -253,29 +253,18 @@ svg { flex: none; }
 
 /* ---------- Contact ---------- */
 .contact {
-  display: grid; grid-template-columns: 1fr 1.4fr .8fr; gap: 2.5rem; align-items: start;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
   max-width: var(--max); margin: 0 auto; padding: 4.5rem 1.5rem;
 }
-.contact h2 { font-size: clamp(1.4rem, 2.6vw, 1.75rem); font-weight: 800; color: var(--navy); margin-bottom: 1.5rem; }
+.contact h2 { font-size: clamp(1.4rem, 2.6vw, 1.75rem); font-weight: 800; color: var(--navy); margin-bottom: .5rem; }
+.contact-lead { margin: 0 0 1.5rem; color: var(--muted); }
 .contact-details ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.1rem; }
 .contact-details li { display: flex; align-items: center; gap: .85rem; font-weight: 600; }
 .contact-details li a { text-decoration: none; color: var(--navy); word-break: break-word; }
 .contact-details li a:hover { color: var(--gold-dark); }
 .contact-details svg { width: 22px; height: 22px; fill: var(--navy); }
-.enquiry { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
-.enquiry label { display: grid; gap: .3rem; font-size: .8rem; font-weight: 600; color: var(--muted); }
-.enquiry .full { grid-column: 1 / -1; }
-.enquiry input, .enquiry select, .enquiry textarea {
-  font-family: inherit; font-size: .95rem; color: var(--ink);
-  padding: .7rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
-}
-.enquiry input:focus, .enquiry select:focus, .enquiry textarea:focus { outline: 2px solid var(--gold); border-color: var(--gold); }
-.enquiry textarea { resize: vertical; }
-.form-note { margin: 0; font-size: .8rem; color: var(--muted); }
-.form-error { margin: 0; font-size: .85rem; color: #b3261e; font-weight: 600; }
-.full-right { grid-column: 1 / -1; justify-self: end; }
 .contact-media {
-  align-self: stretch; min-height: 280px; border-radius: var(--radius);
+  align-self: stretch; min-height: 320px; border-radius: var(--radius);
   background-size: cover; background-position: center;
   border-left: 6px solid var(--gold);
 }
@@ -304,8 +293,6 @@ svg { flex: none; }
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; }
   .why-item:nth-child(3) { border-left: 0; }
-  .contact { grid-template-columns: 1fr 1.4fr; }
-  .contact-media { display: none; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
   .footer-services { text-align: left; }
 }
@@ -339,10 +326,10 @@ svg { flex: none; }
   .cta::before, .cta::after { display: none; }
   .cta-phone { padding-left: 0; border-left: 0; }
   .contact { grid-template-columns: 1fr; }
+  .contact-media { min-height: 220px; }
 }
 @media (max-width: 560px) {
-  .service-grid, .why-grid, .gallery, .enquiry, .footer-inner { grid-template-columns: 1fr; }
+  .service-grid, .why-grid, .gallery, .footer-inner { grid-template-columns: 1fr; }
   .why-item { border-left: 0; padding: 0; }
   .footer-contact { text-align: left; }
-  .full-right { justify-self: stretch; justify-content: center; }
 }

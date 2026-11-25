@@ -34,26 +34,4 @@ document.querySelectorAll('.filter').forEach((btn) => {
   });
 });
 
-// Enquiry form: opens the visitor's email app with the details filled in.
-// Swap for a form service once hosting is decided.
-const form = document.getElementById('enquiry');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const d = Object.fromEntries(new FormData(form));
-  const err = form.querySelector('.form-error');
-  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email || '');
-  if (!d.name || !d.phone || !emailOk) { err.hidden = false; return; }
-  err.hidden = true;
-  const subject = `Website enquiry: ${d.type || 'New project'}`;
-  const body = [
-    `Name: ${d.name}`,
-    `Phone: ${d.phone}`,
-    `Email: ${d.email}`,
-    `Type of project: ${d.type || 'Not given'}`,
-    '',
-    d.message || '',
-  ].join('\n');
-  window.location.href = `mailto:enquiries@oandoconstruction.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-});
-
 document.getElementById('year').textContent = new Date().getFullYear();
