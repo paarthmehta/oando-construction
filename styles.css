@@ -2,10 +2,10 @@
   --navy: #0b1d47;
   --navy-deep: #07142f;
   --navy-mid: #13306e;
-  --gold: #d8a838;
-  --gold-light: #f3cf6b;
-  --gold-dark: #a8781c;
-  --gold-grad: linear-gradient(135deg, #f3cf6b 0%, #d8a838 45%, #a8781c 100%);
+  --gold: #a98850;
+  --gold-light: #d2b37c;
+  --gold-dark: #7e5f31;
+  --gold-grad: linear-gradient(135deg, #dcc08c 0%, #b8955c 45%, #95713d 100%);
   --ink: #1b2440;
   --muted: #5a6380;
   --line: #e3e6ee;
@@ -42,7 +42,7 @@ svg { flex: none; }
 }
 .btn svg { width: 18px; height: 18px; fill: currentColor; }
 .btn-gold { background: var(--gold-grad); color: var(--navy); }
-.btn-gold:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(216, 168, 56, .4); }
+.btn-gold:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(169, 136, 80, .4); }
 .btn-outline { border-color: #fff; color: #fff; background: transparent; }
 .btn-outline:hover { background: rgba(255, 255, 255, .12); }
 
@@ -201,7 +201,7 @@ svg { flex: none; }
 .why { background: var(--navy); color: #fff; padding: 3.5rem 1.5rem; text-align: center; border-top: 6px solid var(--gold); }
 .why h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 2.25rem; }
 .why-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
-.why-item { display: flex; gap: 1rem; text-align: left; padding: 0 1.5rem; border-left: 1px solid rgba(216, 168, 56, .45); }
+.why-item { display: flex; gap: 1rem; text-align: left; padding: 0 1.5rem; border-left: 1px solid rgba(169, 136, 80, .45); }
 .why-item:first-child { border-left: 0; }
 .why-item svg { width: 46px; height: 46px; fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .why-item h3 { font-size: 1rem; margin-bottom: .35rem; }
@@ -248,7 +248,7 @@ svg { flex: none; }
 .cta h2 { color: var(--gold-light); font-size: clamp(1.4rem, 2.6vw, 1.9rem); font-weight: 800; margin-bottom: .5rem; }
 .cta p { margin: 0; color: #dfe4f2; }
 .cta-actions { position: relative; display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; }
-.cta-phone { display: flex; align-items: center; gap: .6rem; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.6rem; padding-left: 1.75rem; border-left: 1px solid rgba(216, 168, 56, .5); }
+.cta-phone { display: flex; align-items: center; gap: .6rem; color: #fff; text-decoration: none; font-weight: 800; font-size: 1.6rem; padding-left: 1.75rem; border-left: 1px solid rgba(169, 136, 80, .5); }
 .cta-phone svg { width: 28px; height: 28px; fill: var(--gold); }
 
 /* ---------- Contact ---------- */
