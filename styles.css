@@ -161,9 +161,9 @@ svg { flex: none; }
   position: relative;
   min-height: 380px;
 }
-.about-media { position: relative; background-size: cover; background-position: center; }
+.about-media { position: relative; overflow: hidden; }
 .about-media::after {
-  content: ""; position: absolute; right: -1px; top: 0; bottom: 0; width: 90px;
+  content: ""; position: absolute; right: -1px; top: 0; bottom: 0; width: 90px; z-index: 1;
   background: linear-gradient(105deg, transparent 49%, var(--gold) 50%, var(--gold-dark) 56%, #fff 57%);
 }
 .about-copy { padding: 4rem 3rem 4rem 2.5rem; max-width: 640px; align-self: center; }
@@ -186,7 +186,7 @@ svg { flex: none; }
   aspect-ratio: 16 / 10; background: var(--paper); box-shadow: var(--shadow);
 }
 .gallery figure[hidden] { display: none; }
-.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.gallery img { transition: transform .4s ease; }
 .gallery figure:hover img { transform: scale(1.05); }
 .gallery figcaption {
   position: absolute; left: 0; right: 0; bottom: 0;
@@ -264,6 +264,7 @@ svg { flex: none; }
 .contact-details li a:hover { color: var(--gold-dark); }
 .contact-details svg { width: 22px; height: 22px; fill: var(--navy); }
 .contact-media {
+  position: relative; overflow: hidden;
   align-self: stretch; min-height: 320px; border-radius: var(--radius);
   background-size: cover; background-position: center;
   border-left: 6px solid var(--gold);
@@ -332,4 +333,9 @@ svg { flex: none; }
   .service-grid, .why-grid, .gallery, .footer-inner { grid-template-columns: 1fr; }
   .why-item { border-left: 0; padding: 0; }
   .footer-contact { text-align: left; }
+}
+
+/* ---------- Responsive photos: each fills its box, the browser picks the file size ---------- */
+.hero-media img, .about-media img, .contact-media img, .gallery img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
 }
